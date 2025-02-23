@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1697390267 source:c:\users\hp\desktop\c programming\sin,cos\main.c
+	<stdio.h>
+	<stdlib.h>
+
