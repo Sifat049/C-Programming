@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="initial-scale=1, width=device-width"/><link rel="icon" type="image/x-icon" href="/favicon.ico"/><link rel="shortcut icon" href="/favicon.ico"/><link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/><link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png"/><link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"/><link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png"/><link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png"/><link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png"/><link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png"/><link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png"/><link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png"/><meta name="next-head-count" content="14"/><meta name="theme-color" content="#fafafa"/><style>
+    #__next {
+      height: 100vh;
+      max-width: 100%;
+    }
+    .ProseMirror {
+      height: 100%;
+      font-family: Inter !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+  
+    }
+  
+    span[data-comment] {
+      background: #feff9c;
+      border-bottom: 2px #FFA400 solid;
+      user-select: all;
+      padding: 0 2px;
+      border-radius: 4px
+    }
+  
+    .code-element {
+      background-color: #e5e5e4;
+      border-radius: 0.375rem;
+      padding-top: 0.15rem;
+      padding-bottom: 0.15rem;
+      padding-left: 0.375rem;
+      padding-right: 0.375rem;
+      font-size: 16px;
+    }
+  
+    .code-block-element {
+      background-color: #f5f5f5;
+      border-radius: 0.375rem;
+      padding: 1.25rem;
+    }
+  
+    div.ProseMirror-selectednode {
+      border: 1px solid #0000FF !important;
+    }
+    img.ProseMirror-selectednode {
+      border: 1px solid #0000FF !important;
+    }
+    :focus-visible {
+        outline: none;
+    }
+    .heading-name {
+      font-family: Helvetica !important;
+      font-size: 1em !important;
+      font-weight: 500 !important;
+    }
+    .heading-name a{
+      font-family: Helvetica !important;
+    }
+    a {
+      text-decoration: none;
+    }
+  
+    /* // For normal link colors START: */
+    .viewer-page a {
+      text-decoration: none;
+      color: #3E3EEE;
+    }
+  
+    .viewer-page a:hover {
+      text-decoration: underline;
+    }
+    /*  // END */
+  
+    .HoverCurrentElement {
+      box-shadow: inset 0px 0px 0px 1px #7080ff !important;
+    }
+  
+    .HoverCurrentElement::before {
+      content: attr(data-name);
+      background-color: #3b5df5;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      font-family: Inter;
+      letter-spacing: normal;
+      color: white;
+      -webkit-text-fill-color: white;
+      padding: 4px 8px;
+      border-radius: 5px 5px 0px 0px;
+      position: absolute;
+      top: -25px;
+      left: 0px;
+    }
+    .selected-block::before {
+      content: attr(data-name);
+      background-color: blue;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      font-family: Inter;
+      letter-spacing: normal;
+      color: white;
+      -webkit-text-fill-color: white;
+      padding: 4px 8px;
+      border-radius: 5px 5px 0px 0px;
+      position: absolute;
+      top: -25px;
+      left: 0px;
+    }
+  
+    html {
+      scroll-behavior: smooth;
+    }
+  
+    .Rounded {
+      border-radius: 10px;
+    }
+  
+    /* Only for bubble context menu in markdown editing */
+    .tippy-box {
+      max-width: 100% !important;
+    }
+  
+    .command-palette {
+      z-index: 2000 !important;
+    }
+  
+    ul {
+      margin-block-start: 0.2rem;
+      margin-block-end: 0.2rem;
+      padding-inline-start: 24px;
+    }
+  
+    ol {
+      list-style-position: inside; /* Makes the number part of the list item&#x27;s box */
+      padding-left: 0;             /* Removes any default left padding */
+  }
+  
+  ol &gt; li {
+      text-indent: -1em;          /* Moves the number to the left, effectively nullifying its default right-side space */
+      padding-left: 1em;          /* Adds padding to the list item content to space it away from the number */
+  }
+  
+  </style><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/><link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"/><link rel="stylesheet" data-href="https://fonts.googleapis.com/icon?family=Material+Icons"/><style data-emotion="css-global 1gnfkzw">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:#0a0a0a;font-family:Inter;font-weight:400;font-size:1rem;line-height:1.5;background-color:#fafafa;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fafafa;}</style><style data-emotion="css lgim5d i2gwa1">.css-lgim5d{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}.css-lgim5d>.MuiGrid-item{max-width:none;}.css-i2gwa1{box-sizing:border-box;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-flex-basis:91.666667%;-ms-flex-preferred-size:91.666667%;flex-basis:91.666667%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:91.666667%;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}.css-i2gwa1>.MuiGrid-item{max-width:none;}@media (min-width:600px){.css-i2gwa1{-webkit-flex-basis:91.666667%;-ms-flex-preferred-size:91.666667%;flex-basis:91.666667%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:91.666667%;}}@media (min-width:900px){.css-i2gwa1{-webkit-flex-basis:66.666667%;-ms-flex-preferred-size:66.666667%;flex-basis:66.666667%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:66.666667%;}}@media (min-width:1200px){.css-i2gwa1{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}@media (min-width:1536px){.css-i2gwa1{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0;max-width:50%;}}</style><link rel="preload" href="/_next/static/css/c9a0eb0c96f41b5a.css" as="style" crossorigin=""/><link rel="stylesheet" href="/_next/static/css/c9a0eb0c96f41b5a.css" crossorigin="" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" crossorigin="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-6001e9cdf50346f2.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/framework-f24c294692a2c667.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/main-ac991979420b64d4.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/pages/_app-a04ad06000f57ce7.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/fc83e031-58af717b63a475da.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/ab6e12f8-b9a30563358cd979.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/832f90ae-7266e8f879a51cc4.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/a2e25b7e-9024e5808921ad7a.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/d57d79ab-a9a8e03bcf9bf818.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/9952-c1778b2c5354d4c9.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/7261-be0cf0e03af506b1.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/8227-14d23f6ba275090f.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/9879-8e7f5fff6af5f39a.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/2069-1406bf76777babed.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/9246-cff134b311cdcd1f.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/5296-cd335c824f1e2ec1.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/6431-f3c0b94c40a552f5.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/9409-7b9543e483b7c1bd.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/4593-47216ea605b7c87e.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/5823-2198b39683a316b7.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/8119-141b8d3da7c44bf7.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/8419-a5b17e2fe10cddd8.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/pages/%5Bid%5D/%5BappName%5D/preview/%5B...pathname%5D-f79530c56dcd01ad.js" defer="" crossorigin=""></script><script src="/_next/static/bqaQ5mbZbCuhrx7YAwK7E/_buildManifest.js" defer="" crossorigin=""></script><script src="/_next/static/bqaQ5mbZbCuhrx7YAwK7E/_ssgManifest.js" defer="" crossorigin=""></script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/></head><body><div id="__next"><div class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-lgim5d" style="margin-top:100px"><div class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column MuiGrid-grid-xs-11 MuiGrid-grid-md-8 MuiGrid-grid-lg-6 css-i2gwa1"></div></div><style>
+          html {
+            overflow-x: hidden;
+          }
+          body {
+            overflow-x: initial;
+          }
+        </style></div><script id="__NEXT_DATA__" type="application/json" crossorigin="">{"props":{"pageProps":{}},"page":"/[id]/[appName]/preview/[...pathname]","query":{},"buildId":"bqaQ5mbZbCuhrx7YAwK7E","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>

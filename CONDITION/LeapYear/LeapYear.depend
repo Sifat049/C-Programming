@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1697472252 source:c:\users\hp\desktop\c programming\leapyear\main.c
+	<stdio.h>
+	<stdlib.h>
+
