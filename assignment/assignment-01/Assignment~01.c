@@ -2,7 +2,7 @@
 (say a, b, c and d), initialize them
 by values of your choice, and calculate
 
-          a * b + (a – c) / d + b
+          a * b + (a â€“ c) / d + b
 */
 #include <stdio.h>
 #include <stdlib.h>
