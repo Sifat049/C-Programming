@@ -6,6 +6,7 @@ Sample input Sample output
 157 1 meter 57 centimeter
 2309 23 meter 9 centimeter */
 
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,3 +21,4 @@ int main()
     printf("  %d  meter  %d  centimeters",meter,cm);
     return 0;
 }
+
